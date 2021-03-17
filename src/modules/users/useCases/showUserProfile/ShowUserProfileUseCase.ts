@@ -14,7 +14,7 @@ class ShowUserProfileUseCase {
     const user = this.usersRepository.findById(user_id);
 
     if (!user) {
-      throw new Error("You are not authenticated");
+      throw new Error("User does not exists!");
     }
 
     return user;
